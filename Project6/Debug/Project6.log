@@ -1,0 +1,6 @@
+﻿  Source.cpp
+c:\users\myhau\source\repos\project6\source.cpp(38): warning C4018: '<': signed/unsigned mismatch
+  c:\users\myhau\source\repos\project6\source.cpp(36): note: while compiling class template member function 'void stackQueue<int>::Resize(unsigned int)'
+  c:\users\myhau\source\repos\project6\source.cpp(112): note: see reference to function template instantiation 'void stackQueue<int>::Resize(unsigned int)' being compiled
+  c:\users\myhau\source\repos\project6\source.cpp(164): note: see reference to class template instantiation 'stackQueue<int>' being compiled
+  Project6.vcxproj -> C:\Users\myhau\source\repos\Project6\Debug\Project6.exe

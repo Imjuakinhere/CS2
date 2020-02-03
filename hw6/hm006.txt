@@ -1,0 +1,108 @@
+bool GameOver(char player)
+    {
+        int horizontal;
+        int verticle;
+        int diagonal;
+        int diagonal1;
+
+        for (int i = 0; i < dimy; ++i)
+        {
+            verticle = 0;
+            for (int j = dimx - 1; j >= 0; --j)
+            {
+                if (Board[j][i] == player)
+                {
+                    verticle++;
+
+                     }
+
+            }
+            if (verticle >= 4)
+            {
+                return true;
+            }
+            else
+            {
+                continue;
+            }
+        }
+        for (int i = 0; i < dimx; ++i)
+        {
+            horizontal = 0;
+            for (int j = 0; j < dimy; ++j)
+            {
+
+                if (Board[i][j] == player)
+                {
+                    horizontal++;
+                }
+
+
+            }
+            if (horizontal >= 4)
+            {
+                return true;
+            }
+            else
+            {
+                continue;
+            }
+        }
+        for (int i = 0; i < dimy; ++i)
+        {
+            for (int j = dimx - 1; j >= 0; --j)
+            {
+                if (Board[j][i] == player)
+                {
+                    diagonal = 0;
+                    int g = i;
+                    for (int l = j; l >= 0; --l)
+                    {
+                        if (Board[l][g] == player)
+                        {
+                            diagonal++;
+                            ++g;
+                        }
+
+                    }
+                    if (diagonal >= 4)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+
+                }
+            }
+        }
+        for (int i = dimy - 1; i >= 0; --i)
+        {
+            for (int j = dimx - 1; j >= 0; --j)
+            {
+                if (Board[j][i] == player)
+                {
+                    diagonal1 = 0;
+                    int g = i;
+                    for (int l = j; l >= 0; --l)
+                    {
+                        if (Board[l][g] == player)
+                        {
+                            diagonal1++;
+                            g--;
+                        }
+                    }
+                    if (diagonal1 >= 4)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+
+            }
+        }
+        return false;
